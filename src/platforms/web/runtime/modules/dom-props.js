@@ -39,7 +39,7 @@ function updateDOMProps (oldVnode: VNodeWithData, vnode: VNodeWithData) {
       }
     }
 
-    if (key === 'value' && elm.tagName !== 'PROGRESS') {
+    if (key === 'value' && elm.tagName !== 'PROGRESS' && elm.tagName.indexOf('-') < 0) {
       // store value as _value as well since
       // non-string values will be stringified
       elm._value = cur
